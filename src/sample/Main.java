@@ -4,15 +4,17 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        Parent root = FXMLLoader.load(getClass().getResource("/views/main.fxml"));
+        primaryStage.setTitle("Configurador de entornos");
+        primaryStage.setScene(new Scene(root, 750, 500));
+        primaryStage.getIcons().add(new Image("file:./src/views/images/iconoApp.gif"));
         primaryStage.show();
     }
 
